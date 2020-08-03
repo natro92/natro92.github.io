@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://natro92.gitee.io/blog/2020/08/03/hello-world/</loc>
+    <loc>https://natro92.gitee.io/2020/08/03/hello-world/</loc>
     
     <lastmod>2020-08-03</lastmod>
     
@@ -10,7 +10,7 @@
   
 
   <url>
-    <loc>https://natro92.gitee.io/blog</loc>
+    <loc>https://natro92.gitee.io/</loc>
     <lastmod>2020-08-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>

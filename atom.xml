@@ -3,11 +3,11 @@
   <title>natro92</title>
   
   
-  <link href="/blog/atom.xml" rel="self"/>
+  <link href="/atom.xml" rel="self"/>
   
-  <link href="https://natro92.gitee.io/blog/"/>
+  <link href="https://natro92.gitee.io/"/>
   <updated>2020-08-03T04:58:29.773Z</updated>
-  <id>https://natro92.gitee.io/blog/</id>
+  <id>https://natro92.gitee.io/</id>
   
   <author>
     <name>natro92</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="https://natro92.gitee.io/blog/2020/08/03/hello-world/"/>
-    <id>https://natro92.gitee.io/blog/2020/08/03/hello-world/</id>
+    <link href="https://natro92.gitee.io/2020/08/03/hello-world/"/>
+    <id>https://natro92.gitee.io/2020/08/03/hello-world/</id>
     <published>2020-08-03T04:58:29.773Z</published>
     <updated>2020-08-03T04:58:29.773Z</updated>
     
