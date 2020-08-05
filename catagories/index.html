@@ -116,7 +116,7 @@ if (autoChangeMode === '1') {
       avatar: 'monsterid',
       meta: 'nick,mail,link'.split(','),
       pageSize: '10',
-      lang: 'zh-CN',
+      lang: 'en',
       recordIP: false,
       serverURLs: '',
       emojiCDN: '',
@@ -131,8 +131,8 @@ if (autoChangeMode === '1') {
   else $.getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js', initValine)
 }
 
-if ('Valine' === 'Valine' || !true) {
-  if (true) loadComment(document.querySelector('#vcomment'),loadValine)
+if ('Valine' === 'Valine' || !false) {
+  if (false) loadComment(document.querySelector('#vcomment'),loadValine)
   else setTimeout(() => loadValine(), 0)
 } else {
   function loadOtherComment () {
