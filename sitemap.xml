@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://natro92.gitee.io/2020/08/06/%E4%BB%A3%E7%A0%81%E6%B5%8B%E8%AF%95/</loc>
+    
+    <lastmod>2020-08-06</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://natro92.gitee.io/2020/08/04/first-blog/</loc>
     
     <lastmod>2020-08-04</lastmod>
@@ -32,12 +39,26 @@
 
   <url>
     <loc>https://natro92.gitee.io/</loc>
-    <lastmod>2020-08-05</lastmod>
+    <lastmod>2020-08-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
+  <url>
+    <loc>https://natro92.gitee.io/tags/%E6%B5%8B%E8%AF%95/</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
+  
+  <url>
+    <loc>https://natro92.gitee.io/categories/%E6%B5%8B%E8%AF%95/</loc>
+    <lastmod>2020-08-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
   
 </urlset>
