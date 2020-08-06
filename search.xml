@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>代码测试</title>
+      <link href="/2020/08/06/%E4%BB%A3%E7%A0%81%E6%B5%8B%E8%AF%95/"/>
+      <url>/2020/08/06/%E4%BB%A3%E7%A0%81%E6%B5%8B%E8%AF%95/</url>
+      
+        <content type="html"><![CDATA[<p>单行代码测试</p><pre><code>codes</code></pre><p><code>codes</code></p><p>多行代码</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">log.d(TAG,&quot;hello world&quot;):</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>单行缩进(一个中文 两个英文）<br><code>&amp;ensp; enter</code><br>&ensp; enter</p><p>换行<br>双空格加回车（代码块中也适用）</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 测试 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 测试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
