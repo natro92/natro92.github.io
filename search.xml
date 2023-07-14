@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>使用Python脚本修改语雀导文件图片格式(二)</title>
+      <link href="/2023/07/14/%E4%BD%BF%E7%94%A8Python%E8%84%9A%E6%9C%AC%E4%BF%AE%E6%94%B9%E8%AF%AD%E9%9B%80%E5%AF%BC%E5%87%BAmd%E6%96%87%E4%BB%B6%E5%9B%BE%E7%89%87%E6%A0%BC%E5%BC%8F(%E4%BA%8C)/"/>
+      <url>/2023/07/14/%E4%BD%BF%E7%94%A8Python%E8%84%9A%E6%9C%AC%E4%BF%AE%E6%94%B9%E8%AF%AD%E9%9B%80%E5%AF%BC%E5%87%BAmd%E6%96%87%E4%BB%B6%E5%9B%BE%E7%89%87%E6%A0%BC%E5%BC%8F(%E4%BA%8C)/</url>
+      
+        <content type="html"><![CDATA[<p>如果你用了我之前发的脚本，你就会发现这个图片删后缀解析功能失效了。<br>不仅如此，以前用过生成的所有图片也失效了。<br><img src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1689341771143-c9ff93d6-105e-4b66-843b-6a71055630dc.png" alt="image.png"><br>如果预览的话，会提示如下：<br><img src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1689341553395-02439fe9-4d5d-4472-addd-b145a50c68a5.png" alt="image.png"><br>但是当多次访问之后就会提示下载，但是图片仍然不会解析。<br>本来以为用不了了，打算搞个接口自己刷新，但是教程太乱了，而且感觉应该还有绕过的办法。<br>经过多次调试发现，这里有一个referer验证。<br>没有referer的访问是会被403的。<br>因此这个问题就变成了如何让访问具有referer验证，或者说不让他验证。<br>在网上查了很久发现一段代码：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=<span class="string">&quot;referrer&quot;</span> content=<span class="string">&quot;no-referrer&quot;</span> /&gt;</span><br></pre></td></tr></table></figure><p>用它来拒绝referer的请求。原文提示说，需要放在主题文件下的post.ejs文件。<br><img src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1689341855216-ca39347e-3323-48e1-8f30-3c30a27f6efd.png" alt="image.png"><br><img src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1689341886707-ad13d3bd-e38d-4ca6-8f99-950d29a7933b.png" alt="image.png"><br>如果到这里，你的博客正好有<code>.ejs</code>文件。那就少了很多折腾。<br>以我的为例（butterfly）这个主题文件下的内容全是以<code>.pug</code>格式为后缀，<br><img src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1689341987132-603e1d10-1028-495d-b11c-7f6ff6dc77fd.png" alt="image.png"><br>因此，原封不动照抄是会一片红的。<img src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1689342102855-d9c2abd5-2686-4a18-b042-81261ab1a39a.png" alt="image.png"><br>研究了挺长时间，找了找语法，得到了一种修改办法。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">meta(name=<span class="string">&quot;referrer&quot;</span>, content=<span class="string">&quot;no-referrer&quot;</span>)</span><br></pre></td></tr></table></figure><p>将其修改成对应语法，并且塞到某一个位置。注意，这行代码在不同位置，可能会导致你的博客排版错误。<br>我放在了<code>themes\butterfly\layout</code>下的post.pug，并置于：<br><img src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1689342167433-b44c1209-5565-4bdd-9140-991addb4bdeb.png" alt="image.png"><br>再说一遍，这行代码在不同位置，可能会导致你的博客排版错误。这里是我试过不会排版错误，而且能重新拉取到图片的地方。<br>保存之后，运行以下命令：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo cl &amp;&amp; hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure><p>查看本地；拉取效果。<br>如果重新出现图片，就说明拉取成功了，deploy到远端即可。<br><img src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1689342465833-28799703-6b56-49d7-af39-bd43bd76e6ce.png" alt="image.png"></p><h2 id="已经有了更好的办法"><a href="#已经有了更好的办法" class="headerlink" title="已经有了更好的办法"></a>已经有了更好的办法</h2><p>之前按这样改，会出现进入页面还是损坏图片，但是点击获取一下，再刷新页面就会正常获取图片。<br>思考了一下，这不就说明引用条件太晚了，图片已经被请求过了。<br>那我就有个想法，直接改到引用比较靠前的文件中去，比如说：<br><code>\themes\butterfly\layout\includes</code>文件夹下的<code>layout.pug</code>在这个文件中写。<br><img src="https://cdn.nlark.com/yuque/0/2023/png/34866087/1689343646123-2d3213ae-5535-4e76-b193-2df07d9aa8b4.png" alt="image.png"><br>保存刷新一下，发现已经可用了。进入加载页面就可以显示图片了。</p><h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>如果修改之后还没显示，清除cookie刷新一下试试，如果还不行，那就只能自己再想办法了。改过好几个了，应该还能挺一段时间。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 脚本 </tag>
+            
+            <tag> Shortcut </tag>
+            
+            <tag> 语雀 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>web191-web213SQL注入篇（二）</title>
       <link href="/2023/07/12/web191-web213SQL%E6%B3%A8%E5%85%A5%E7%AF%87%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
       <url>/2023/07/12/web191-web213SQL%E6%B3%A8%E5%85%A5%E7%AF%87%EF%BC%88%E4%BA%8C%EF%BC%89/</url>
