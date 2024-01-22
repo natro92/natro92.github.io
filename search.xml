@@ -15,14 +15,16 @@
           
           <category> CTF </category>
           
+          <category> JavaSec </category>
+          
       </categories>
       
       
         <tags>
             
-            <tag> WriteUp </tag>
+            <tag> Java反序列化 </tag>
             
-            <tag> JavaSec </tag>
+            <tag> CC链 </tag>
             
         </tags>
       
@@ -42,14 +44,14 @@
           
           <category> CTF </category>
           
+          <category> JavaSec </category>
+          
       </categories>
       
       
         <tags>
             
-            <tag> WriteUp </tag>
-            
-            <tag> CTFshow0-1 </tag>
+            <tag> Java反序列化 </tag>
             
         </tags>
       
