@@ -6,7 +6,7 @@
   <link href="https://natro92.github.io/atom.xml" rel="self"/>
   
   <link href="https://natro92.github.io/"/>
-  <updated>2024-01-22T10:38:12.034Z</updated>
+  <updated>2024-01-22T16:24:06.922Z</updated>
   <id>https://natro92.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java反序列化之CC1</title>
+    <link href="https://natro92.github.io/2024/01/23/Java%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E4%B9%8BCC1/"/>
+    <id>https://natro92.github.io/2024/01/23/Java%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E4%B9%8BCC1/</id>
+    <published>2024-01-22T16:23:31.000Z</published>
+    <updated>2024-01-22T16:24:06.922Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;什么是CC链&quot;&gt;&lt;a href=&quot;#什么是CC链&quot; class=&quot;headerlink&quot; title=&quot;什么是CC链&quot;&gt;&lt;/a&gt;什么是CC链&lt;/h1&gt;&lt;p&gt;CC（Common</summary>
+        
+      
+    
+    
+    
+    <category term="CTF" scheme="https://natro92.github.io/categories/CTF/"/>
+    
+    
+    <category term="WriteUp" scheme="https://natro92.github.io/tags/WriteUp/"/>
+    
+    <category term="JavaSec" scheme="https://natro92.github.io/tags/JavaSec/"/>
+    
+  </entry>
   
   <entry>
     <title>Java反序列化之反射和URLDNS</title>
@@ -545,33 +572,6 @@
     <category term="WriteUp" scheme="https://natro92.github.io/tags/WriteUp/"/>
     
     <category term="CISCN" scheme="https://natro92.github.io/tags/CISCN/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>web89-web105php特性篇（一）</title>
-    <link href="https://natro92.github.io/2023/05/16/web89-web105php%E7%89%B9%E6%80%A7%E7%AF%87%EF%BC%88%E4%B8%80%EF%BC%89/"/>
-    <id>https://natro92.github.io/2023/05/16/web89-web105php%E7%89%B9%E6%80%A7%E7%AF%87%EF%BC%88%E4%B8%80%EF%BC%89/</id>
-    <published>2023-05-16T11:42:29.000Z</published>
-    <updated>2023-07-11T15:06:04.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;web89&quot;&gt;&lt;a href=&quot;#web89&quot; class=&quot;headerlink&quot; title=&quot;web89&quot;&gt;&lt;/a&gt;web89&lt;/h1&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
-        
-      
-    
-    
-    
-    <category term="CTF" scheme="https://natro92.github.io/categories/CTF/"/>
-    
-    
-    <category term="WriteUp" scheme="https://natro92.github.io/tags/WriteUp/"/>
-    
-    <category term="CTFshow0-1" scheme="https://natro92.github.io/tags/CTFshow0-1/"/>
     
   </entry>
   
